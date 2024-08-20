@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "why_travel_with_backstages",
+  "info": {
+    "singularName": "why-travel-with-backstage",
+    "pluralName": "why-travel-with-backstages",
+    "displayName": "why travel with backstage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
