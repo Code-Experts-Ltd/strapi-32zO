@@ -1,4 +1,3 @@
-// ~/strapi-aws-s3/backend/config/plugins.js
 module.exports = ({ env }) => ({
   upload: {
     config: {
@@ -15,6 +14,11 @@ module.exports = ({ env }) => ({
           Bucket: env("AWS_STORAGE_BUCKET_NAME"),
         },
       },
+    },
+  },
+  "strapi-plugin-populate-deep": {
+    config: {
+      defaultDepth: 3,
     },
   },
 });
