@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "about-us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "portfolio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "text"
+    },
+    "para1": {
+      "type": "text"
+    },
+    "para2": {
+      "type": "text"
+    },
+    "para3": {
+      "type": "text"
+    },
+    "signature": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "information": {
+      "displayName": "information",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-ana.information"
+    },
+    "conclusion": {
+      "type": "text"
+    }
+  }
+}

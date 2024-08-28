@@ -2,12 +2,9 @@
   "collectionName": "components_description_information",
   "info": {
     "displayName": "information",
-    "icon": "bulletList"
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
-  "attributes": {
-    "description": {
-      "type": "text"
-    }
-  }
+  "attributes": {}
 }

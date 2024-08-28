@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_about_ana_about_angelas",
+  "info": {
+    "displayName": "about-angela",
+    "icon": "folder",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "youtube": {
+      "type": "text"
+    },
+    "instagram": {
+      "type": "text"
+    },
+    "music": {
+      "type": "text"
+    },
+    "para1": {
+      "type": "text"
+    },
+    "para2": {
+      "type": "text"
+    },
+    "profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

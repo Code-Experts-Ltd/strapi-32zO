@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_about_ana_about_anas",
+  "info": {
+    "displayName": "about-ana",
+    "icon": "chartCircle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "text"
+    },
+    "instagram": {
+      "type": "text"
+    },
+    "music": {
+      "type": "text"
+    },
+    "para1": {
+      "type": "text"
+    },
+    "para2": {
+      "type": "text"
+    },
+    "profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
