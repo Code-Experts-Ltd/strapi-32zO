@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city_guides",
+  "info": {
+    "singularName": "city-guide",
+    "pluralName": "city-guides",
+    "displayName": "city-guide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "information": {
+      "displayName": "description",
+      "type": "component",
+      "repeatable": true,
+      "component": "description.description"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_description_descriptions",
+  "info": {
+    "displayName": "description",
+    "icon": "filePdf"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  }
+}

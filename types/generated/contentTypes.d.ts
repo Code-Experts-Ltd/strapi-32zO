@@ -814,6 +814,41 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiCityGuideCityGuide extends Schema.CollectionType {
+  collectionName: 'city_guides';
+  info: {
+    singularName: 'city-guide';
+    pluralName: 'city-guides';
+    displayName: 'city-guide';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image1: Attribute.Media;
+    image2: Attribute.Media;
+    title: Attribute.Text;
+    price: Attribute.String;
+    information: Attribute.Component<'description.description', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::city-guide.city-guide',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::city-guide.city-guide',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWhyTravelWithBackstageWhyTravelWithBackstage
   extends Schema.CollectionType {
   collectionName: 'why_travel_with_backstages';
@@ -866,6 +901,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::city-guide.city-guide': ApiCityGuideCityGuide;
       'api::why-travel-with-backstage.why-travel-with-backstage': ApiWhyTravelWithBackstageWhyTravelWithBackstage;
     }
   }
