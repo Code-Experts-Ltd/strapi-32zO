@@ -841,7 +841,9 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     title: Attribute.Text;
     description: Attribute.Text;
     image: Attribute.Media;
-    category: Attribute.String;
+    category: Attribute.Enumeration<
+      ['Hotels', 'Restaurants', 'Beach Clubs', 'Coffee Shops', 'Bars & Clubs']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
