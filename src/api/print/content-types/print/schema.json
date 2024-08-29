@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prints",
+  "info": {
+    "singularName": "print",
+    "pluralName": "prints",
+    "displayName": "Print",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "information": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.information"
+    }
+  }
+}

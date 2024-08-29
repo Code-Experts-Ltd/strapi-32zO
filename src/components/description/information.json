@@ -6,5 +6,9 @@
     "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  }
 }

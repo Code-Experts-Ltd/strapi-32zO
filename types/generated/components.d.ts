@@ -74,7 +74,9 @@ export interface DescriptionInformation extends Schema.Component {
     icon: 'bulletList';
     description: '';
   };
-  attributes: {};
+  attributes: {
+    description: Attribute.Text;
+  };
 }
 
 declare module '@strapi/types' {
