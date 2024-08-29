@@ -842,7 +842,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     description: Attribute.Text;
     image: Attribute.Media;
     category: Attribute.Enumeration<
-      ['Hotels', 'Restaurants', 'Beach Clubs', 'Coffee Shops', 'Bars & Clubs']
+      ['Hotels', 'Restaurants', 'Beach Clubs', 'Coffee Shops', 'Bars and Clubs']
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
