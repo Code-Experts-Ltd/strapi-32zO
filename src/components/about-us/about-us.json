@@ -1,28 +1,22 @@
 {
-  "collectionName": "components_about_ana_about_anas",
+  "collectionName": "components_about_us_about_uses",
   "info": {
-    "displayName": "about-ana",
-    "icon": "chartCircle",
+    "displayName": "about-us",
+    "icon": "bold",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "youtube": {
+    "para1": {
       "type": "text"
     },
     "instagram": {
       "type": "text"
     },
+    "youtube": {
+      "type": "text"
+    },
     "music": {
-      "type": "text"
-    },
-    "para1": {
-      "type": "text"
-    },
-    "para2": {
       "type": "text"
     },
     "profile": {
@@ -34,6 +28,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "name": {
+      "type": "text"
+    },
+    "para2": {
+      "type": "text"
     }
   }
 }

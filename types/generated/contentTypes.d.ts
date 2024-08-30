@@ -806,8 +806,8 @@ export interface ApiAboutUsAboutUs extends Schema.CollectionType {
     para2: Attribute.Text;
     para3: Attribute.Text;
     signature: Attribute.Media;
-    information: Attribute.Component<'about-ana.information'>;
     conclusion: Attribute.Text;
+    about: Attribute.Component<'about-us.about-us', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

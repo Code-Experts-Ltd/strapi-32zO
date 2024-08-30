@@ -46,14 +46,13 @@
         "audios"
       ]
     },
-    "information": {
-      "displayName": "information",
-      "type": "component",
-      "repeatable": false,
-      "component": "about-ana.information"
-    },
     "conclusion": {
       "type": "text"
+    },
+    "about": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.about-us"
     }
   }
 }
