@@ -889,6 +889,39 @@ export interface ApiCityGuideCityGuide extends Schema.CollectionType {
   };
 }
 
+export interface ApiFollowUsFollowUs extends Schema.CollectionType {
+  collectionName: 'follow_uses';
+  info: {
+    singularName: 'follow-us';
+    pluralName: 'follow-uses';
+    displayName: 'follow-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    youtube: Attribute.Text;
+    instagram: Attribute.Text;
+    music: Attribute.Text;
+    images: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::follow-us.follow-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::follow-us.follow-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPrintPrint extends Schema.CollectionType {
   collectionName: 'prints';
   info: {
@@ -977,6 +1010,7 @@ declare module '@strapi/types' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::blog.blog': ApiBlogBlog;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
+      'api::follow-us.follow-us': ApiFollowUsFollowUs;
       'api::print.print': ApiPrintPrint;
       'api::why-travel-with-backstage.why-travel-with-backstage': ApiWhyTravelWithBackstageWhyTravelWithBackstage;
     }
