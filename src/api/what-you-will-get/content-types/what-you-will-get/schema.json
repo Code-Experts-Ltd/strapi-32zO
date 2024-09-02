@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "what_you_will_gets",
+  "info": {
+    "singularName": "what-you-will-get",
+    "pluralName": "what-you-will-gets",
+    "displayName": "what-you-will-get",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "emoji": {
+      "type": "string"
+    }
+  }
+}

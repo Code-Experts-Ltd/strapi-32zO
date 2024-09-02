@@ -956,6 +956,39 @@ export interface ApiPrintPrint extends Schema.CollectionType {
   };
 }
 
+export interface ApiWhatYouWillGetWhatYouWillGet extends Schema.CollectionType {
+  collectionName: 'what_you_will_gets';
+  info: {
+    singularName: 'what-you-will-get';
+    pluralName: 'what-you-will-gets';
+    displayName: 'what-you-will-get';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.Text;
+    description: Attribute.Text;
+    emoji: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::what-you-will-get.what-you-will-get',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::what-you-will-get.what-you-will-get',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWhyTravelWithBackstageWhyTravelWithBackstage
   extends Schema.CollectionType {
   collectionName: 'why_travel_with_backstages';
@@ -1012,6 +1045,7 @@ declare module '@strapi/types' {
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
       'api::print.print': ApiPrintPrint;
+      'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
       'api::why-travel-with-backstage.why-travel-with-backstage': ApiWhyTravelWithBackstageWhyTravelWithBackstage;
     }
   }
