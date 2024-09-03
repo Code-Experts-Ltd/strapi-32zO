@@ -831,18 +831,25 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   info: {
     singularName: 'blog';
     pluralName: 'blogs';
-    displayName: 'blog';
+    displayName: 'Blog';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.Text;
-    description: Attribute.Text;
-    image: Attribute.Media;
-    category: Attribute.Enumeration<
-      ['Hotels', 'Restaurants', 'Beach Clubs', 'Coffee Shops', 'Bars and Clubs']
+    blog: Attribute.DynamicZone<
+      [
+        'category.category',
+        'main-heading.main-heading',
+        'published-date.published-date',
+        'description.blog-description',
+        'quick-overview.quick-overview',
+        'blog-header-image.blog-header-image',
+        'post-header-image.post-header-image',
+        'information-box.information-box',
+        'images.images'
+      ]
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

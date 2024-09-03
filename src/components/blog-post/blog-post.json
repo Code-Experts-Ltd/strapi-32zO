@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blog_post_blog_posts",
+  "info": {
+    "displayName": "blogPost",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "header_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "post_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

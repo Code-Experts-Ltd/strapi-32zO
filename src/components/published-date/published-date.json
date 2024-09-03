@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_published_date_published_dates",
+  "info": {
+    "displayName": "published_date",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "published_date": {
+      "type": "boolean"
+    }
+  }
+}

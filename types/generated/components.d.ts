@@ -28,6 +28,55 @@ export interface AboutUsAbout extends Schema.Component {
   attributes: {};
 }
 
+export interface BlogHeaderImageBlogHeaderImage extends Schema.Component {
+  collectionName: 'components_blog_header_image_blog_header_images';
+  info: {
+    displayName: 'blog_header_image';
+    icon: 'bell';
+  };
+  attributes: {
+    blog_header_image: Attribute.Media;
+  };
+}
+
+export interface BlogPostBlogPost extends Schema.Component {
+  collectionName: 'components_blog_post_blog_posts';
+  info: {
+    displayName: 'blogPost';
+    icon: 'brush';
+  };
+  attributes: {
+    header_image: Attribute.Media;
+    post_title: Attribute.Text;
+    description: Attribute.RichText;
+    images: Attribute.Media;
+  };
+}
+
+export interface CategoryCategory extends Schema.Component {
+  collectionName: 'components_category_categories';
+  info: {
+    displayName: 'category';
+    icon: 'bulletList';
+  };
+  attributes: {
+    category: Attribute.Enumeration<
+      ['Hotels', 'Restaurants', 'Beach Clubs', 'Coffee Shops', 'Bars and Clubs']
+    >;
+  };
+}
+
+export interface DescriptionBlogDescription extends Schema.Component {
+  collectionName: 'components_description_blog_descriptions';
+  info: {
+    displayName: 'blog_description';
+    icon: 'crown';
+  };
+  attributes: {
+    description: Attribute.RichText;
+  };
+}
+
 export interface DescriptionDescription extends Schema.Component {
   collectionName: 'components_description_descriptions';
   info: {
@@ -51,13 +100,104 @@ export interface DescriptionInformation extends Schema.Component {
   };
 }
 
+export interface ImagesImages extends Schema.Component {
+  collectionName: 'components_images_images';
+  info: {
+    displayName: 'images';
+    icon: 'envelop';
+    description: '';
+  };
+  attributes: {
+    images: Attribute.Media;
+  };
+}
+
+export interface InformationBoxInformationBox extends Schema.Component {
+  collectionName: 'components_information_box_information_boxes';
+  info: {
+    displayName: 'information_box';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    information_box: Attribute.Component<'information.information'>;
+  };
+}
+
+export interface InformationInformation extends Schema.Component {
+  collectionName: 'components_information_information';
+  info: {
+    displayName: 'information';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+  };
+}
+
+export interface MainHeadingMainHeading extends Schema.Component {
+  collectionName: 'components_main_heading_main_headings';
+  info: {
+    displayName: 'main_heading';
+    icon: 'cup';
+  };
+  attributes: {
+    main_heading: Attribute.RichText;
+  };
+}
+
+export interface PostHeaderImagePostHeaderImage extends Schema.Component {
+  collectionName: 'components_post_header_image_post_header_images';
+  info: {
+    displayName: 'post_header_image';
+    icon: 'bold';
+  };
+  attributes: {
+    post_header_image: Attribute.Media;
+  };
+}
+
+export interface PublishedDatePublishedDate extends Schema.Component {
+  collectionName: 'components_published_date_published_dates';
+  info: {
+    displayName: 'published_date';
+    icon: 'brush';
+  };
+  attributes: {
+    published_date: Attribute.Boolean;
+  };
+}
+
+export interface QuickOverviewQuickOverview extends Schema.Component {
+  collectionName: 'components_quick_overview_quick_overviews';
+  info: {
+    displayName: 'quick_overview';
+  };
+  attributes: {
+    quick_overview: Attribute.RichText;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'about-us.about-us': AboutUsAboutUs;
       'about-us.about': AboutUsAbout;
+      'blog-header-image.blog-header-image': BlogHeaderImageBlogHeaderImage;
+      'blog-post.blog-post': BlogPostBlogPost;
+      'category.category': CategoryCategory;
+      'description.blog-description': DescriptionBlogDescription;
       'description.description': DescriptionDescription;
       'description.information': DescriptionInformation;
+      'images.images': ImagesImages;
+      'information-box.information-box': InformationBoxInformationBox;
+      'information.information': InformationInformation;
+      'main-heading.main-heading': MainHeadingMainHeading;
+      'post-header-image.post-header-image': PostHeaderImagePostHeaderImage;
+      'published-date.published-date': PublishedDatePublishedDate;
+      'quick-overview.quick-overview': QuickOverviewQuickOverview;
     }
   }
 }

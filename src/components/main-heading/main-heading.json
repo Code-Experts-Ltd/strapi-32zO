@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_main_heading_main_headings",
+  "info": {
+    "displayName": "main_heading",
+    "icon": "cup"
+  },
+  "options": {},
+  "attributes": {
+    "main_heading": {
+      "type": "richtext"
+    }
+  }
+}

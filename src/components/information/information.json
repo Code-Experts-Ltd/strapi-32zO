@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_information_information",
+  "info": {
+    "displayName": "information",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_post_header_image_post_header_images",
+  "info": {
+    "displayName": "post_header_image",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "post_header_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_information_box_information_boxes",
+  "info": {
+    "displayName": "information_box",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "information_box": {
+      "displayName": "information",
+      "type": "component",
+      "repeatable": false,
+      "component": "information.information"
+    }
+  }
+}

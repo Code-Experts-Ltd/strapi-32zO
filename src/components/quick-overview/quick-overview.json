@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_quick_overview_quick_overviews",
+  "info": {
+    "displayName": "quick_overview"
+  },
+  "options": {},
+  "attributes": {
+    "quick_overview": {
+      "type": "richtext"
+    }
+  }
+}
