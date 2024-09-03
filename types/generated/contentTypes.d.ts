@@ -889,6 +889,38 @@ export interface ApiCityGuideCityGuide extends Schema.CollectionType {
   };
 }
 
+export interface ApiExploreExplore extends Schema.SingleType {
+  collectionName: 'explores';
+  info: {
+    singularName: 'explore';
+    pluralName: 'explores';
+    displayName: 'Explore';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image1: Attribute.Media;
+    image2: Attribute.Media;
+    what_inside: Attribute.Component<'description.information', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::explore.explore',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::explore.explore',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFaqFaq extends Schema.CollectionType {
   collectionName: 'faqs';
   info: {
@@ -1078,6 +1110,7 @@ declare module '@strapi/types' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::blog.blog': ApiBlogBlog;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
+      'api::explore.explore': ApiExploreExplore;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
       'api::print.print': ApiPrintPrint;
