@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_divider_dividers",
+  "info": {
+    "displayName": "divider",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "divider": {
+      "type": "boolean"
+    }
+  }
+}

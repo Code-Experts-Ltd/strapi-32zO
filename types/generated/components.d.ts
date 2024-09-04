@@ -100,6 +100,17 @@ export interface DescriptionInformation extends Schema.Component {
   };
 }
 
+export interface DividerDivider extends Schema.Component {
+  collectionName: 'components_divider_dividers';
+  info: {
+    displayName: 'divider';
+    icon: 'cog';
+  };
+  attributes: {
+    divider: Attribute.Boolean;
+  };
+}
+
 export interface ImagesImages extends Schema.Component {
   collectionName: 'components_images_images';
   info: {
@@ -191,6 +202,7 @@ declare module '@strapi/types' {
       'description.blog-description': DescriptionBlogDescription;
       'description.description': DescriptionDescription;
       'description.information': DescriptionInformation;
+      'divider.divider': DividerDivider;
       'images.images': ImagesImages;
       'information-box.information-box': InformationBoxInformationBox;
       'information.information': InformationInformation;

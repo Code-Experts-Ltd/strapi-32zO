@@ -23,7 +23,8 @@
         "blog-header-image.blog-header-image",
         "post-header-image.post-header-image",
         "information-box.information-box",
-        "images.images"
+        "images.images",
+        "divider.divider"
       ]
     }
   }
