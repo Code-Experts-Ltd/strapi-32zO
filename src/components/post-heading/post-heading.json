@@ -2,11 +2,12 @@
   "collectionName": "components_post_heading_post_headings",
   "info": {
     "displayName": "post_heading",
-    "icon": "brush"
+    "icon": "brush",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "post_heading": {
+    "heading": {
       "type": "richtext"
     }
   }

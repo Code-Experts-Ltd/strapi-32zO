@@ -188,9 +188,10 @@ export interface PostHeadingPostHeading extends Schema.Component {
   info: {
     displayName: 'post_heading';
     icon: 'brush';
+    description: '';
   };
   attributes: {
-    post_heading: Attribute.RichText;
+    heading: Attribute.RichText;
   };
 }
 
