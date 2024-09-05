@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "main_blog_heading": {
+    "heading": {
       "type": "richtext"
     }
   }

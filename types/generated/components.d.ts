@@ -156,7 +156,7 @@ export interface MainBlogHeadingMainHeading extends Schema.Component {
     description: '';
   };
   attributes: {
-    main_blog_heading: Attribute.RichText;
+    heading: Attribute.RichText;
   };
 }
 
