@@ -849,7 +849,9 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         'post-header-image.post-header-image',
         'information-box.information-box',
         'images.images',
-        'divider.divider'
+        'divider.divider',
+        'post-description.post-description',
+        'post-heading.post-heading'
       ]
     >;
     createdAt: Attribute.DateTime;

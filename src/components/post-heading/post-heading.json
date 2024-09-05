@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_post_heading_post_headings",
+  "info": {
+    "displayName": "post_heading",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "post_heading": {
+      "type": "richtext"
+    }
+  }
+}
