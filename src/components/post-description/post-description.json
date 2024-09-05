@@ -2,11 +2,12 @@
   "collectionName": "components_post_description_post_descriptions",
   "info": {
     "displayName": "post_description",
-    "icon": "bold"
+    "icon": "bold",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "post_description": {
+    "description": {
       "type": "text"
     }
   }

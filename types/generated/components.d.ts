@@ -165,9 +165,10 @@ export interface PostDescriptionPostDescription extends Schema.Component {
   info: {
     displayName: 'post_description';
     icon: 'bold';
+    description: '';
   };
   attributes: {
-    post_description: Attribute.Text;
+    description: Attribute.Text;
   };
 }
 
