@@ -841,7 +841,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     blog: Attribute.DynamicZone<
       [
         'category.category',
-        'main-heading.main-heading',
+        'main-blog-heading.main-heading',
         'published-date.published-date',
         'description.blog-description',
         'quick-overview.quick-overview',

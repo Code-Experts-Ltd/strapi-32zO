@@ -148,14 +148,26 @@ export interface InformationInformation extends Schema.Component {
   };
 }
 
-export interface MainHeadingMainHeading extends Schema.Component {
+export interface MainBlogHeadingMainHeading extends Schema.Component {
   collectionName: 'components_main_heading_main_headings';
   info: {
-    displayName: 'main_heading';
+    displayName: 'main_blog_heading';
     icon: 'cup';
+    description: '';
   };
   attributes: {
-    main_heading: Attribute.RichText;
+    main_blog_heading: Attribute.RichText;
+  };
+}
+
+export interface PostDescriptionPostDescription extends Schema.Component {
+  collectionName: 'components_post_description_post_descriptions';
+  info: {
+    displayName: 'post_description';
+    icon: 'bold';
+  };
+  attributes: {
+    post_description: Attribute.Text;
   };
 }
 
@@ -206,7 +218,8 @@ declare module '@strapi/types' {
       'images.images': ImagesImages;
       'information-box.information-box': InformationBoxInformationBox;
       'information.information': InformationInformation;
-      'main-heading.main-heading': MainHeadingMainHeading;
+      'main-blog-heading.main-heading': MainBlogHeadingMainHeading;
+      'post-description.post-description': PostDescriptionPostDescription;
       'post-header-image.post-header-image': PostHeaderImagePostHeaderImage;
       'published-date.published-date': PublishedDatePublishedDate;
       'quick-overview.quick-overview': QuickOverviewQuickOverview;

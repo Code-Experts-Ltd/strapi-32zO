@@ -1,12 +1,13 @@
 {
   "collectionName": "components_main_heading_main_headings",
   "info": {
-    "displayName": "main_heading",
-    "icon": "cup"
+    "displayName": "main_blog_heading",
+    "icon": "cup",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "main_heading": {
+    "main_blog_heading": {
       "type": "richtext"
     }
   }

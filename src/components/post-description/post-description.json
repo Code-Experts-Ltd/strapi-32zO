@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_post_description_post_descriptions",
+  "info": {
+    "displayName": "post_description",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "post_description": {
+      "type": "text"
+    }
+  }
+}
