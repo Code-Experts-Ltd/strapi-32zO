@@ -28,6 +28,16 @@
         "post-description.post-description",
         "post-heading.post-heading"
       ]
+    },
+    "category": {
+      "type": "component",
+      "repeatable": false,
+      "component": "category.category"
+    },
+    "main_blog_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "main-blog-heading.main-heading"
     }
   }
 }

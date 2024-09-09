@@ -854,6 +854,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         'post-heading.post-heading'
       ]
     >;
+    category: Attribute.Component<'category.category'>;
+    main_blog_heading: Attribute.Component<'main-blog-heading.main-heading'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
