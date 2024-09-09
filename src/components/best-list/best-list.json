@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_best_list_best_lists",
+  "info": {
+    "displayName": "best_list"
+  },
+  "options": {},
+  "attributes": {
+    "best_list": {
+      "displayName": "list_best",
+      "type": "component",
+      "repeatable": true,
+      "component": "best-list.list-best"
+    }
+  }
+}

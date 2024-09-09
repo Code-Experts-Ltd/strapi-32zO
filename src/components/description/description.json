@@ -2,12 +2,13 @@
   "collectionName": "components_description_descriptions",
   "info": {
     "displayName": "description",
-    "icon": "filePdf"
+    "icon": "filePdf",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "description": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

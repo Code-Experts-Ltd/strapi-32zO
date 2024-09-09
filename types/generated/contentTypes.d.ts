@@ -901,6 +901,46 @@ export interface ApiCityGuideCityGuide extends Schema.CollectionType {
   };
 }
 
+export interface ApiEveryThingYouNeedEveryThingYouNeed
+  extends Schema.CollectionType {
+  collectionName: 'every_thing_you_needs';
+  info: {
+    singularName: 'every-thing-you-need';
+    pluralName: 'every-thing-you-needs';
+    displayName: 'Every-thing-you-need';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    every_thing_need: Attribute.DynamicZone<
+      [
+        'information-box.information-box',
+        'description.description',
+        'heading.heading',
+        'image.image',
+        'best-list.best-list'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::every-thing-you-need.every-thing-you-need',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::every-thing-you-need.every-thing-you-need',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExploreExplore extends Schema.SingleType {
   collectionName: 'explores';
   info: {
@@ -1122,6 +1162,7 @@ declare module '@strapi/types' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::blog.blog': ApiBlogBlog;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
+      'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::explore.explore': ApiExploreExplore;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;

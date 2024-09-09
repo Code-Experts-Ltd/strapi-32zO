@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_best_list_list_bests",
+  "info": {
+    "displayName": "list_best",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "information": {
+      "type": "richtext"
+    }
+  }
+}

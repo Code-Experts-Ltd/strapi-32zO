@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_heading_headings",
+  "info": {
+    "displayName": "heading",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    }
+  }
+}

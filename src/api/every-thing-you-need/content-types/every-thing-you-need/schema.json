@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "every_thing_you_needs",
+  "info": {
+    "singularName": "every-thing-you-need",
+    "pluralName": "every-thing-you-needs",
+    "displayName": "Every-thing-you-need",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "every_thing_need": {
+      "type": "dynamiczone",
+      "components": [
+        "information-box.information-box",
+        "description.description",
+        "heading.heading",
+        "image.image",
+        "best-list.best-list"
+      ]
+    }
+  }
+}

@@ -28,6 +28,27 @@ export interface AboutUsAbout extends Schema.Component {
   attributes: {};
 }
 
+export interface BestListBestList extends Schema.Component {
+  collectionName: 'components_best_list_best_lists';
+  info: {
+    displayName: 'best_list';
+  };
+  attributes: {
+    best_list: Attribute.Component<'best-list.list-best', true>;
+  };
+}
+
+export interface BestListListBest extends Schema.Component {
+  collectionName: 'components_best_list_list_bests';
+  info: {
+    displayName: 'list_best';
+    icon: 'brush';
+  };
+  attributes: {
+    information: Attribute.RichText;
+  };
+}
+
 export interface BlogHeaderImageBlogHeaderImage extends Schema.Component {
   collectionName: 'components_blog_header_image_blog_header_images';
   info: {
@@ -82,9 +103,10 @@ export interface DescriptionDescription extends Schema.Component {
   info: {
     displayName: 'description';
     icon: 'filePdf';
+    description: '';
   };
   attributes: {
-    description: Attribute.Text;
+    description: Attribute.RichText;
   };
 }
 
@@ -108,6 +130,28 @@ export interface DividerDivider extends Schema.Component {
   };
   attributes: {
     divider: Attribute.Boolean;
+  };
+}
+
+export interface HeadingHeading extends Schema.Component {
+  collectionName: 'components_heading_headings';
+  info: {
+    displayName: 'heading';
+    icon: 'collapse';
+  };
+  attributes: {
+    heading: Attribute.RichText;
+  };
+}
+
+export interface ImageImage extends Schema.Component {
+  collectionName: 'components_image_images';
+  info: {
+    displayName: 'image';
+    icon: 'arrowUp';
+  };
+  attributes: {
+    image: Attribute.Media;
   };
 }
 
@@ -221,6 +265,8 @@ declare module '@strapi/types' {
     export interface Components {
       'about-us.about-us': AboutUsAboutUs;
       'about-us.about': AboutUsAbout;
+      'best-list.best-list': BestListBestList;
+      'best-list.list-best': BestListListBest;
       'blog-header-image.blog-header-image': BlogHeaderImageBlogHeaderImage;
       'blog-post.blog-post': BlogPostBlogPost;
       'category.category': CategoryCategory;
@@ -228,6 +274,8 @@ declare module '@strapi/types' {
       'description.description': DescriptionDescription;
       'description.information': DescriptionInformation;
       'divider.divider': DividerDivider;
+      'heading.heading': HeadingHeading;
+      'image.image': ImageImage;
       'images.images': ImagesImages;
       'information-box.information-box': InformationBoxInformationBox;
       'information.information': InformationInformation;
