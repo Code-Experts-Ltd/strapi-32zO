@@ -18,9 +18,13 @@
         "information-box.information-box",
         "description.description",
         "heading.heading",
-        "image.image",
         "best-list.best-list"
       ]
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image.image"
     }
   }
 }

@@ -919,10 +919,10 @@ export interface ApiEveryThingYouNeedEveryThingYouNeed
         'information-box.information-box',
         'description.description',
         'heading.heading',
-        'image.image',
         'best-list.best-list'
       ]
     >;
+    image: Attribute.Component<'image.image'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
