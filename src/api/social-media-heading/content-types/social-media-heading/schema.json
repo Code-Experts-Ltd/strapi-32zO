@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "social_media_headings",
+  "info": {
+    "singularName": "social-media-heading",
+    "pluralName": "social-media-headings",
+    "displayName": "Social-Media-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

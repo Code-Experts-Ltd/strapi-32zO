@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "blogs_headings",
+  "info": {
+    "singularName": "blogs-heading",
+    "pluralName": "blogs-headings",
+    "displayName": "blogs-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    }
+  }
+}

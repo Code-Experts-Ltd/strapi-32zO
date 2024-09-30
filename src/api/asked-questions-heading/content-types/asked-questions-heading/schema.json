@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "asked_questions_headings",
+  "info": {
+    "singularName": "asked-questions-heading",
+    "pluralName": "asked-questions-headings",
+    "displayName": "asked-questions-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

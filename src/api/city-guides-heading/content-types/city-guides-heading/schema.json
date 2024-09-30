@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "city_guides_headings",
+  "info": {
+    "singularName": "city-guides-heading",
+    "pluralName": "city-guides-headings",
+    "displayName": "city-guides-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "sub_heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

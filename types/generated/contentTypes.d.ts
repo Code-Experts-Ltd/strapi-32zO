@@ -826,6 +826,38 @@ export interface ApiAboutUsAboutUs extends Schema.CollectionType {
   };
 }
 
+export interface ApiAskedQuestionsHeadingAskedQuestionsHeading
+  extends Schema.SingleType {
+  collectionName: 'asked_questions_headings';
+  info: {
+    singularName: 'asked-questions-heading';
+    pluralName: 'asked-questions-headings';
+    displayName: 'asked-questions-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::asked-questions-heading.asked-questions-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::asked-questions-heading.asked-questions-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -866,6 +898,36 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogsHeadingBlogsHeading extends Schema.SingleType {
+  collectionName: 'blogs_headings';
+  info: {
+    singularName: 'blogs-heading';
+    pluralName: 'blogs-headings';
+    displayName: 'blogs-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blogs-heading.blogs-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blogs-heading.blogs-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCityGuideCityGuide extends Schema.CollectionType {
   collectionName: 'city_guides';
   info: {
@@ -894,6 +956,39 @@ export interface ApiCityGuideCityGuide extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::city-guide.city-guide',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCityGuidesHeadingCityGuidesHeading
+  extends Schema.SingleType {
+  collectionName: 'city_guides_headings';
+  info: {
+    singularName: 'city-guides-heading';
+    pluralName: 'city-guides-headings';
+    displayName: 'city-guides-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    sub_heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::city-guides-heading.city-guides-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::city-guides-heading.city-guides-heading',
       'oneToOne',
       'admin::user'
     > &
@@ -1075,6 +1170,69 @@ export interface ApiPrintPrint extends Schema.CollectionType {
   };
 }
 
+export interface ApiPrintsHeadingPrintsHeading extends Schema.SingleType {
+  collectionName: 'prints_headings';
+  info: {
+    singularName: 'prints-heading';
+    pluralName: 'prints-headings';
+    displayName: 'prints-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::prints-heading.prints-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::prints-heading.prints-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSocialMediaHeadingSocialMediaHeading
+  extends Schema.SingleType {
+  collectionName: 'social_media_headings';
+  info: {
+    singularName: 'social-media-heading';
+    pluralName: 'social-media-headings';
+    displayName: 'Social-Media-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social-media-heading.social-media-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social-media-heading.social-media-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWhatYouWillGetWhatYouWillGet extends Schema.CollectionType {
   collectionName: 'what_you_will_gets';
   info: {
@@ -1141,6 +1299,37 @@ export interface ApiWhyTravelWithBackstageWhyTravelWithBackstage
   };
 }
 
+export interface ApiWhyTravelWithBackstageHeadingWhyTravelWithBackstageHeading
+  extends Schema.SingleType {
+  collectionName: 'why_travel_with_backstage_headings';
+  info: {
+    singularName: 'why-travel-with-backstage-heading';
+    pluralName: 'why-travel-with-backstage-headings';
+    displayName: 'why travel with backstage-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::why-travel-with-backstage-heading.why-travel-with-backstage-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::why-travel-with-backstage-heading.why-travel-with-backstage-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1160,15 +1349,21 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::asked-questions-heading.asked-questions-heading': ApiAskedQuestionsHeadingAskedQuestionsHeading;
       'api::blog.blog': ApiBlogBlog;
+      'api::blogs-heading.blogs-heading': ApiBlogsHeadingBlogsHeading;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
+      'api::city-guides-heading.city-guides-heading': ApiCityGuidesHeadingCityGuidesHeading;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::explore.explore': ApiExploreExplore;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
       'api::print.print': ApiPrintPrint;
+      'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
+      'api::social-media-heading.social-media-heading': ApiSocialMediaHeadingSocialMediaHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
       'api::why-travel-with-backstage.why-travel-with-backstage': ApiWhyTravelWithBackstageWhyTravelWithBackstage;
+      'api::why-travel-with-backstage-heading.why-travel-with-backstage-heading': ApiWhyTravelWithBackstageHeadingWhyTravelWithBackstageHeading;
     }
   }
 }

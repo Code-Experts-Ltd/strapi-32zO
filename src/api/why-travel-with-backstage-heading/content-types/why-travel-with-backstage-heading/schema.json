@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "why_travel_with_backstage_headings",
+  "info": {
+    "singularName": "why-travel-with-backstage-heading",
+    "pluralName": "why-travel-with-backstage-headings",
+    "displayName": "why travel with backstage-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    }
+  }
+}

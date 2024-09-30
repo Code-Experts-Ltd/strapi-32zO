@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "prints_headings",
+  "info": {
+    "singularName": "prints-heading",
+    "pluralName": "prints-headings",
+    "displayName": "prints-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
