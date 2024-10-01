@@ -1066,6 +1066,38 @@ export interface ApiEveryThingYouNeedEveryThingYouNeed
   };
 }
 
+export interface ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading
+  extends Schema.SingleType {
+  collectionName: 'every_thing_you_need_headings';
+  info: {
+    singularName: 'every-thing-you-need-heading';
+    pluralName: 'every-thing-you-need-headings';
+    displayName: 'Every-thing-you-need-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::every-thing-you-need-heading.every-thing-you-need-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::every-thing-you-need-heading.every-thing-you-need-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExploreExplore extends Schema.SingleType {
   collectionName: 'explores';
   info: {
@@ -1091,6 +1123,39 @@ export interface ApiExploreExplore extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::explore.explore',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExploreMoreHeadingExploreMoreHeading
+  extends Schema.SingleType {
+  collectionName: 'explore_more_headings';
+  info: {
+    singularName: 'explore-more-heading';
+    pluralName: 'explore-more-headings';
+    displayName: 'Explore-more-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    sub_heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::explore-more-heading.explore-more-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::explore-more-heading.explore-more-heading',
       'oneToOne',
       'admin::user'
     > &
@@ -1419,7 +1484,9 @@ declare module '@strapi/types' {
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
       'api::city-guides-heading.city-guides-heading': ApiCityGuidesHeadingCityGuidesHeading;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
+      'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
       'api::explore.explore': ApiExploreExplore;
+      'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
       'api::print.print': ApiPrintPrint;

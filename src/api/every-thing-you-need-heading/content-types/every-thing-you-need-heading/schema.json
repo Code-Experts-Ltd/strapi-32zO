@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "every_thing_you_need_headings",
+  "info": {
+    "singularName": "every-thing-you-need-heading",
+    "pluralName": "every-thing-you-need-headings",
+    "displayName": "Every-thing-you-need-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

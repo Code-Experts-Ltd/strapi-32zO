@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "explore_more_headings",
+  "info": {
+    "singularName": "explore-more-heading",
+    "pluralName": "explore-more-headings",
+    "displayName": "Explore-more-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "sub_heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
