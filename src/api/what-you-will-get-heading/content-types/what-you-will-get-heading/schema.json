@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "what_you_will_get_headings",
+  "info": {
+    "singularName": "what-you-will-get-heading",
+    "pluralName": "what-you-will-get-headings",
+    "displayName": "what-you-will-get-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    }
+  }
+}

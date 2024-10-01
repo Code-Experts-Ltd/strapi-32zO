@@ -1298,6 +1298,37 @@ export interface ApiWhatYouWillGetWhatYouWillGet extends Schema.CollectionType {
   };
 }
 
+export interface ApiWhatYouWillGetHeadingWhatYouWillGetHeading
+  extends Schema.SingleType {
+  collectionName: 'what_you_will_get_headings';
+  info: {
+    singularName: 'what-you-will-get-heading';
+    pluralName: 'what-you-will-get-headings';
+    displayName: 'what-you-will-get-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::what-you-will-get-heading.what-you-will-get-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::what-you-will-get-heading.what-you-will-get-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWhyTravelWithBackstageWhyTravelWithBackstage
   extends Schema.CollectionType {
   collectionName: 'why_travel_with_backstages';
@@ -1395,6 +1426,7 @@ declare module '@strapi/types' {
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
       'api::social-media-heading.social-media-heading': ApiSocialMediaHeadingSocialMediaHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
+      'api::what-you-will-get-heading.what-you-will-get-heading': ApiWhatYouWillGetHeadingWhatYouWillGetHeading;
       'api::why-travel-with-backstage.why-travel-with-backstage': ApiWhyTravelWithBackstageWhyTravelWithBackstage;
       'api::why-travel-with-backstage-heading.why-travel-with-backstage-heading': ApiWhyTravelWithBackstageHeadingWhyTravelWithBackstageHeading;
     }
