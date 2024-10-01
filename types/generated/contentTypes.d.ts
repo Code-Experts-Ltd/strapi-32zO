@@ -826,6 +826,36 @@ export interface ApiAboutUsAboutUs extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsHeadingAboutUsHeading extends Schema.SingleType {
+  collectionName: 'about_us_headings';
+  info: {
+    singularName: 'about-us-heading';
+    pluralName: 'about-us-headings';
+    displayName: 'about-us-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us-heading.about-us-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us-heading.about-us-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAskedQuestionsHeadingAskedQuestionsHeading
   extends Schema.SingleType {
   collectionName: 'asked_questions_headings';
@@ -1351,6 +1381,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::about-us-heading.about-us-heading': ApiAboutUsHeadingAboutUsHeading;
       'api::asked-questions-heading.asked-questions-heading': ApiAskedQuestionsHeadingAskedQuestionsHeading;
       'api::blog.blog': ApiBlogBlog;
       'api::blogs-heading.blogs-heading': ApiBlogsHeadingBlogsHeading;

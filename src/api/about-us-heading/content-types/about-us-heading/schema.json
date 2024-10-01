@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_headings",
+  "info": {
+    "singularName": "about-us-heading",
+    "pluralName": "about-us-headings",
+    "displayName": "about-us-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    }
+  }
+}
