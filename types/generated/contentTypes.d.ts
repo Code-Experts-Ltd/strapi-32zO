@@ -1176,6 +1176,7 @@ export interface ApiPrintsHeadingPrintsHeading extends Schema.SingleType {
     singularName: 'prints-heading';
     pluralName: 'prints-headings';
     displayName: 'prints-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1183,6 +1184,7 @@ export interface ApiPrintsHeadingPrintsHeading extends Schema.SingleType {
   attributes: {
     heading: Attribute.RichText;
     description: Attribute.RichText;
+    sub_heading: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

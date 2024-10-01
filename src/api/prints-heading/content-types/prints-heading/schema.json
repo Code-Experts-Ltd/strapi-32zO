@@ -4,7 +4,8 @@
   "info": {
     "singularName": "prints-heading",
     "pluralName": "prints-headings",
-    "displayName": "prints-heading"
+    "displayName": "prints-heading",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,9 @@
       "type": "richtext"
     },
     "description": {
+      "type": "richtext"
+    },
+    "sub_heading": {
       "type": "richtext"
     }
   }
