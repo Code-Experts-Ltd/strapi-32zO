@@ -4,7 +4,8 @@
   "info": {
     "singularName": "why-travel-with-backstage",
     "pluralName": "why-travel-with-backstages",
-    "displayName": "why travel with backstage"
+    "displayName": "why travel with backstage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,20 @@
       "type": "text"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

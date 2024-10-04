@@ -4,7 +4,8 @@
   "info": {
     "singularName": "city-guides-heading",
     "pluralName": "city-guides-headings",
-    "displayName": "city-guides-heading"
+    "displayName": "city-guides-heading",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,11 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

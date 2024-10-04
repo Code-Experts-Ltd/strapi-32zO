@@ -4,7 +4,8 @@
   "info": {
     "singularName": "follow-us",
     "pluralName": "follow-uses",
-    "displayName": "follow-us"
+    "displayName": "follow-us",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,14 +22,20 @@
       "type": "text"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos",
         "audios",
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

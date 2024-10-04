@@ -4,7 +4,8 @@
   "info": {
     "singularName": "explore-more-heading",
     "pluralName": "explore-more-headings",
-    "displayName": "Explore-more-heading"
+    "displayName": "Explore-more-heading",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,11 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

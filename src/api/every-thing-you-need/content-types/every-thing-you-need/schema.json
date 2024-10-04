@@ -25,6 +25,11 @@
       "type": "component",
       "repeatable": false,
       "component": "image.image"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

@@ -742,7 +742,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -771,6 +770,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -808,6 +808,7 @@ export interface ApiAboutUsAboutUs extends Schema.CollectionType {
     signature: Attribute.Media;
     conclusion: Attribute.Text;
     about: Attribute.Component<'about-us.about-us', true>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -863,6 +864,7 @@ export interface ApiAskedQuestionsHeadingAskedQuestionsHeading
     singularName: 'asked-questions-heading';
     pluralName: 'asked-questions-headings';
     displayName: 'asked-questions-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -870,6 +872,7 @@ export interface ApiAskedQuestionsHeadingAskedQuestionsHeading
   attributes: {
     heading: Attribute.RichText;
     description: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -918,6 +921,7 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     >;
     category: Attribute.Component<'category.category'>;
     main_blog_heading: Attribute.Component<'main-blog-heading.main-heading'>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -934,12 +938,14 @@ export interface ApiBlogsHeadingBlogsHeading extends Schema.SingleType {
     singularName: 'blogs-heading';
     pluralName: 'blogs-headings';
     displayName: 'blogs-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     heading: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -975,6 +981,7 @@ export interface ApiCityGuideCityGuide extends Schema.CollectionType {
     title: Attribute.Text;
     price: Attribute.String;
     information: Attribute.Component<'description.description', true>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1000,6 +1007,7 @@ export interface ApiCityGuidesHeadingCityGuidesHeading
     singularName: 'city-guides-heading';
     pluralName: 'city-guides-headings';
     displayName: 'city-guides-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1008,6 +1016,7 @@ export interface ApiCityGuidesHeadingCityGuidesHeading
     heading: Attribute.RichText;
     sub_heading: Attribute.RichText;
     description: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1048,6 +1057,7 @@ export interface ApiEveryThingYouNeedEveryThingYouNeed
       ]
     >;
     image: Attribute.Component<'image.image'>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1073,6 +1083,7 @@ export interface ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading
     singularName: 'every-thing-you-need-heading';
     pluralName: 'every-thing-you-need-headings';
     displayName: 'Every-thing-you-need-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1080,6 +1091,7 @@ export interface ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading
   attributes: {
     heading: Attribute.RichText;
     description: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1104,6 +1116,7 @@ export interface ApiExploreExplore extends Schema.SingleType {
     singularName: 'explore';
     pluralName: 'explores';
     displayName: 'Explore';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1112,6 +1125,7 @@ export interface ApiExploreExplore extends Schema.SingleType {
     image1: Attribute.Media;
     image2: Attribute.Media;
     what_inside: Attribute.Component<'description.information', true>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1137,6 +1151,7 @@ export interface ApiExploreMoreHeadingExploreMoreHeading
     singularName: 'explore-more-heading';
     pluralName: 'explore-more-headings';
     displayName: 'Explore-more-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1145,6 +1160,7 @@ export interface ApiExploreMoreHeadingExploreMoreHeading
     heading: Attribute.RichText;
     sub_heading: Attribute.RichText;
     description: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1188,6 +1204,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
         'Collaboration Requests'
       ]
     >;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1204,6 +1221,7 @@ export interface ApiFollowUsFollowUs extends Schema.CollectionType {
     singularName: 'follow-us';
     pluralName: 'follow-uses';
     displayName: 'follow-us';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1213,6 +1231,7 @@ export interface ApiFollowUsFollowUs extends Schema.CollectionType {
     instagram: Attribute.Text;
     music: Attribute.Text;
     images: Attribute.Media;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1247,6 +1266,7 @@ export interface ApiPrintPrint extends Schema.CollectionType {
     price: Attribute.String;
     image: Attribute.Media;
     information: Attribute.Component<'description.information', true>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1280,6 +1300,7 @@ export interface ApiPrintsHeadingPrintsHeading extends Schema.SingleType {
     heading: Attribute.RichText;
     description: Attribute.RichText;
     sub_heading: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1305,6 +1326,7 @@ export interface ApiSocialMediaHeadingSocialMediaHeading
     singularName: 'social-media-heading';
     pluralName: 'social-media-headings';
     displayName: 'Social-Media-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1312,6 +1334,7 @@ export interface ApiSocialMediaHeadingSocialMediaHeading
   attributes: {
     heading: Attribute.RichText;
     description: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1345,6 +1368,7 @@ export interface ApiWhatYouWillGetWhatYouWillGet extends Schema.CollectionType {
     title: Attribute.Text;
     description: Attribute.Text;
     emoji: Attribute.String;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1401,6 +1425,7 @@ export interface ApiWhyTravelWithBackstageWhyTravelWithBackstage
     singularName: 'why-travel-with-backstage';
     pluralName: 'why-travel-with-backstages';
     displayName: 'why travel with backstage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1409,6 +1434,7 @@ export interface ApiWhyTravelWithBackstageWhyTravelWithBackstage
     heading: Attribute.Text;
     description: Attribute.Text;
     image: Attribute.Media;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1434,12 +1460,14 @@ export interface ApiWhyTravelWithBackstageHeadingWhyTravelWithBackstageHeading
     singularName: 'why-travel-with-backstage-heading';
     pluralName: 'why-travel-with-backstage-headings';
     displayName: 'why travel with backstage-heading';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     heading: Attribute.RichText;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

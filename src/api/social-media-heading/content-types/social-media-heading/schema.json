@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media-heading",
     "pluralName": "social-media-headings",
-    "displayName": "Social-Media-heading"
+    "displayName": "Social-Media-heading",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,11 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

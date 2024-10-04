@@ -4,7 +4,8 @@
   "info": {
     "singularName": "every-thing-you-need-heading",
     "pluralName": "every-thing-you-need-headings",
-    "displayName": "Every-thing-you-need-heading"
+    "displayName": "Every-thing-you-need-heading",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,11 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

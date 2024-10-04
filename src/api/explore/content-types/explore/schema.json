@@ -4,7 +4,8 @@
   "info": {
     "singularName": "explore",
     "pluralName": "explores",
-    "displayName": "Explore"
+    "displayName": "Explore",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,29 +13,36 @@
   "pluginOptions": {},
   "attributes": {
     "image1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "what_inside": {
       "type": "component",
       "repeatable": true,
       "component": "description.information"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }
