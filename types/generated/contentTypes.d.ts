@@ -1175,6 +1175,41 @@ export interface ApiExploreExplore extends Schema.SingleType {
   };
 }
 
+export interface ApiExploreDubaiExploreDubai extends Schema.CollectionType {
+  collectionName: 'explore_dubais';
+  info: {
+    singularName: 'explore-dubai';
+    pluralName: 'explore-dubais';
+    displayName: 'explore-dubai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image1: Attribute.Media;
+    image2: Attribute.Media;
+    title: Attribute.Text;
+    price: Attribute.Text;
+    information: Attribute.Component<'description.information', true>;
+    seo: Attribute.Component<'shared.seo'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::explore-dubai.explore-dubai',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::explore-dubai.explore-dubai',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExploreMoreHeadingExploreMoreHeading
   extends Schema.SingleType {
   collectionName: 'explore_more_headings';
@@ -1611,6 +1646,7 @@ declare module '@strapi/types' {
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
       'api::explore.explore': ApiExploreExplore;
+      'api::explore-dubai.explore-dubai': ApiExploreDubaiExploreDubai;
       'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;

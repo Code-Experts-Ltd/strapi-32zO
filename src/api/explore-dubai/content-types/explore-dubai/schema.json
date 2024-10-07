@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "explore_dubais",
+  "info": {
+    "singularName": "explore-dubai",
+    "pluralName": "explore-dubais",
+    "displayName": "explore-dubai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image1": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "image2": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "text"
+    },
+    "price": {
+      "type": "text"
+    },
+    "information": {
+      "type": "component",
+      "repeatable": true,
+      "component": "description.information"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
