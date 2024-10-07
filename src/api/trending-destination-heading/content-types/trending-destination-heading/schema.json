@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "trending_destination_headings",
+  "info": {
+    "singularName": "trending-destination-heading",
+    "pluralName": "trending-destination-headings",
+    "displayName": "trending-destination-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

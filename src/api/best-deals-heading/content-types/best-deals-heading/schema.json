@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "best_deals_headings",
+  "info": {
+    "singularName": "best-deals-heading",
+    "pluralName": "best-deals-headings",
+    "displayName": "best-deals-heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

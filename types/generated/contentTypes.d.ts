@@ -891,6 +891,37 @@ export interface ApiAskedQuestionsHeadingAskedQuestionsHeading
   };
 }
 
+export interface ApiBestDealsHeadingBestDealsHeading extends Schema.SingleType {
+  collectionName: 'best_deals_headings';
+  info: {
+    singularName: 'best-deals-heading';
+    pluralName: 'best-deals-headings';
+    displayName: 'best-deals-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::best-deals-heading.best-deals-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::best-deals-heading.best-deals-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -1250,6 +1281,39 @@ export interface ApiFollowUsFollowUs extends Schema.CollectionType {
   };
 }
 
+export interface ApiHotPicksHeadingHotPicksHeading extends Schema.SingleType {
+  collectionName: 'hot_picks_headings';
+  info: {
+    singularName: 'hot-picks-heading';
+    pluralName: 'hot-picks-headings';
+    displayName: 'hot-picks-heading';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'shared.seo'>;
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hot-picks-heading.hot-picks-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hot-picks-heading.hot-picks-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPrintPrint extends Schema.CollectionType {
   collectionName: 'prints';
   info: {
@@ -1346,6 +1410,38 @@ export interface ApiSocialMediaHeadingSocialMediaHeading
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::social-media-heading.social-media-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTrendingDestinationHeadingTrendingDestinationHeading
+  extends Schema.SingleType {
+  collectionName: 'trending_destination_headings';
+  info: {
+    singularName: 'trending-destination-heading';
+    pluralName: 'trending-destination-headings';
+    displayName: 'trending-destination-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::trending-destination-heading.trending-destination-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::trending-destination-heading.trending-destination-heading',
       'oneToOne',
       'admin::user'
     > &
@@ -1507,6 +1603,7 @@ declare module '@strapi/types' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::about-us-heading.about-us-heading': ApiAboutUsHeadingAboutUsHeading;
       'api::asked-questions-heading.asked-questions-heading': ApiAskedQuestionsHeadingAskedQuestionsHeading;
+      'api::best-deals-heading.best-deals-heading': ApiBestDealsHeadingBestDealsHeading;
       'api::blog.blog': ApiBlogBlog;
       'api::blogs-heading.blogs-heading': ApiBlogsHeadingBlogsHeading;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
@@ -1517,9 +1614,11 @@ declare module '@strapi/types' {
       'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
+      'api::hot-picks-heading.hot-picks-heading': ApiHotPicksHeadingHotPicksHeading;
       'api::print.print': ApiPrintPrint;
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
       'api::social-media-heading.social-media-heading': ApiSocialMediaHeadingSocialMediaHeading;
+      'api::trending-destination-heading.trending-destination-heading': ApiTrendingDestinationHeadingTrendingDestinationHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
       'api::what-you-will-get-heading.what-you-will-get-heading': ApiWhatYouWillGetHeadingWhatYouWillGetHeading;
       'api::why-travel-with-backstage.why-travel-with-backstage': ApiWhyTravelWithBackstageWhyTravelWithBackstage;
