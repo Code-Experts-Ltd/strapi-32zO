@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "crypto_currency_headings",
+  "info": {
+    "singularName": "crypto-currency-heading",
+    "pluralName": "crypto-currency-headings",
+    "displayName": "crypto_currency_heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

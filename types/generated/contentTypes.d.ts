@@ -1066,6 +1066,38 @@ export interface ApiCityGuidesHeadingCityGuidesHeading
   };
 }
 
+export interface ApiCryptoCurrencyHeadingCryptoCurrencyHeading
+  extends Schema.SingleType {
+  collectionName: 'crypto_currency_headings';
+  info: {
+    singularName: 'crypto-currency-heading';
+    pluralName: 'crypto-currency-headings';
+    displayName: 'crypto_currency_heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::crypto-currency-heading.crypto-currency-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::crypto-currency-heading.crypto-currency-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEveryThingYouNeedEveryThingYouNeed
   extends Schema.CollectionType {
   collectionName: 'every_thing_you_needs';
@@ -1643,6 +1675,7 @@ declare module '@strapi/types' {
       'api::blogs-heading.blogs-heading': ApiBlogsHeadingBlogsHeading;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
       'api::city-guides-heading.city-guides-heading': ApiCityGuidesHeadingCityGuidesHeading;
+      'api::crypto-currency-heading.crypto-currency-heading': ApiCryptoCurrencyHeadingCryptoCurrencyHeading;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
       'api::explore.explore': ApiExploreExplore;
