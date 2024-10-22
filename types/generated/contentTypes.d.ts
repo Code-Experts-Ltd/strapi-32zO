@@ -1348,6 +1348,41 @@ export interface ApiFollowUsFollowUs extends Schema.CollectionType {
   };
 }
 
+export interface ApiHeaderSectionTextHeaderSectionText
+  extends Schema.SingleType {
+  collectionName: 'header_section_texts';
+  info: {
+    singularName: 'header-section-text';
+    pluralName: 'header-section-texts';
+    displayName: 'header-section-text';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    description: Attribute.RichText;
+    paymentDescription: Attribute.RichText;
+    ff: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header-section-text.header-section-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header-section-text.header-section-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHotPicksHeadingHotPicksHeading extends Schema.SingleType {
   collectionName: 'hot_picks_headings';
   info: {
@@ -1683,6 +1718,7 @@ declare module '@strapi/types' {
       'api::explore-more-heading.explore-more-heading': ApiExploreMoreHeadingExploreMoreHeading;
       'api::faq.faq': ApiFaqFaq;
       'api::follow-us.follow-us': ApiFollowUsFollowUs;
+      'api::header-section-text.header-section-text': ApiHeaderSectionTextHeaderSectionText;
       'api::hot-picks-heading.hot-picks-heading': ApiHotPicksHeadingHotPicksHeading;
       'api::print.print': ApiPrintPrint;
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;

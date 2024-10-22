@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "header_section_texts",
+  "info": {
+    "singularName": "header-section-text",
+    "pluralName": "header-section-texts",
+    "displayName": "header-section-text",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "paymentDescription": {
+      "type": "richtext"
+    },
+    "ff": {
+      "type": "richtext"
+    }
+  }
+}
