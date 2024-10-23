@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_texts",
+  "info": {
+    "singularName": "footer-text",
+    "pluralName": "footer-texts",
+    "displayName": "footer-text"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
