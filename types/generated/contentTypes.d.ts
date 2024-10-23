@@ -857,6 +857,40 @@ export interface ApiAboutUsHeadingAboutUsHeading extends Schema.SingleType {
   };
 }
 
+export interface ApiAboutUsHomeSectionDataAboutUsHomeSectionData
+  extends Schema.SingleType {
+  collectionName: 'about_us_home_section_datas';
+  info: {
+    singularName: 'about-us-home-section-data';
+    pluralName: 'about-us-home-section-datas';
+    displayName: 'about-us-home-section-data';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    sub_heading: Attribute.RichText;
+    description: Attribute.RichText;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us-home-section-data.about-us-home-section-data',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us-home-section-data.about-us-home-section-data',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAskedQuestionsHeadingAskedQuestionsHeading
   extends Schema.SingleType {
   collectionName: 'asked_questions_headings';
@@ -1735,6 +1769,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::about-us-heading.about-us-heading': ApiAboutUsHeadingAboutUsHeading;
+      'api::about-us-home-section-data.about-us-home-section-data': ApiAboutUsHomeSectionDataAboutUsHomeSectionData;
       'api::asked-questions-heading.asked-questions-heading': ApiAskedQuestionsHeadingAskedQuestionsHeading;
       'api::best-deals-heading.best-deals-heading': ApiBestDealsHeadingBestDealsHeading;
       'api::blog.blog': ApiBlogBlog;
