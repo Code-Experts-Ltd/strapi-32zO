@@ -1155,6 +1155,7 @@ export interface ApiEveryThingYouNeedEveryThingYouNeed
     >;
     image: Attribute.Component<'image.image'>;
     seo: Attribute.Component<'shared.seo'>;
+    region: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

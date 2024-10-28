@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_region_regions",
+  "info": {
+    "displayName": "region",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "region": {
+      "type": "string"
+    }
+  }
+}

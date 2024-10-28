@@ -260,6 +260,17 @@ export interface QuickOverviewQuickOverview extends Schema.Component {
   };
 }
 
+export interface RegionRegion extends Schema.Component {
+  collectionName: 'components_region_regions';
+  info: {
+    displayName: 'region';
+    icon: 'folder';
+  };
+  attributes: {
+    region: Attribute.String;
+  };
+}
+
 export interface SharedMetaSocial extends Schema.Component {
   collectionName: 'components_shared_meta_socials';
   info: {
@@ -336,6 +347,7 @@ declare module '@strapi/types' {
       'post-heading.post-heading': PostHeadingPostHeading;
       'published-date.published-date': PublishedDatePublishedDate;
       'quick-overview.quick-overview': QuickOverviewQuickOverview;
+      'region.region': RegionRegion;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
     }
