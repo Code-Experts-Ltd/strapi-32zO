@@ -17,6 +17,9 @@
         "videos",
         "audios"
       ]
+    },
+    "image_by": {
+      "type": "string"
     }
   }
 }

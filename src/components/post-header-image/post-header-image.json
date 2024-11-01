@@ -2,19 +2,24 @@
   "collectionName": "components_post_header_image_post_header_images",
   "info": {
     "displayName": "post_header_image",
-    "icon": "bold"
+    "icon": "bold",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "post_header_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "image_by": {
+      "type": "string"
     }
   }
 }

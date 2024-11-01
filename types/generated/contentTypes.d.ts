@@ -1042,7 +1042,6 @@ export interface ApiCityGuideCityGuide extends Schema.CollectionType {
   };
   attributes: {
     image1: Attribute.Media;
-    image2: Attribute.Media;
     title: Attribute.Text;
     price: Attribute.String;
     information: Attribute.Component<'description.description', true>;

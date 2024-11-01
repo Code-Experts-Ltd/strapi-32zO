@@ -54,9 +54,11 @@ export interface BlogHeaderImageBlogHeaderImage extends Schema.Component {
   info: {
     displayName: 'blog_header_image';
     icon: 'bell';
+    description: '';
   };
   attributes: {
     blog_header_image: Attribute.Media;
+    image_by: Attribute.String;
   };
 }
 
@@ -164,6 +166,7 @@ export interface ImagesImages extends Schema.Component {
   };
   attributes: {
     images: Attribute.Media;
+    image_by: Attribute.String;
   };
 }
 
@@ -221,9 +224,11 @@ export interface PostHeaderImagePostHeaderImage extends Schema.Component {
   info: {
     displayName: 'post_header_image';
     icon: 'bold';
+    description: '';
   };
   attributes: {
     post_header_image: Attribute.Media;
+    image_by: Attribute.String;
   };
 }
 
