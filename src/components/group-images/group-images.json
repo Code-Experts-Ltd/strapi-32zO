@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_group_images_group_images",
+  "info": {
+    "displayName": "group_images",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "images.images"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_multi_images_multi_images",
+  "info": {
+    "displayName": "multi-images",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "images.images"
+    }
+  }
+}

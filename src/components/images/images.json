@@ -2,21 +2,19 @@
   "collectionName": "components_images_images",
   "info": {
     "displayName": "images",
-    "icon": "envelop",
-    "description": ""
+    "icon": "command"
   },
   "options": {},
   "attributes": {
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
+    "image": {
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "image_by": {
       "type": "string"

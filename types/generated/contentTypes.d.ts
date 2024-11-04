@@ -978,10 +978,10 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         'blog-header-image.blog-header-image',
         'post-header-image.post-header-image',
         'information-box.information-box',
-        'images.images',
         'divider.divider',
         'post-description.post-description',
-        'post-heading.post-heading'
+        'post-heading.post-heading',
+        'multi-images.multi-images'
       ]
     >;
     category: Attribute.Component<'category.category'>;

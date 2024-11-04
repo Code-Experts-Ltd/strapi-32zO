@@ -135,6 +135,17 @@ export interface DividerDivider extends Schema.Component {
   };
 }
 
+export interface GroupImagesGroupImages extends Schema.Component {
+  collectionName: 'components_group_images_group_images';
+  info: {
+    displayName: 'group_images';
+    icon: 'brush';
+  };
+  attributes: {
+    images: Attribute.Component<'images.images', true>;
+  };
+}
+
 export interface HeadingHeading extends Schema.Component {
   collectionName: 'components_heading_headings';
   info: {
@@ -161,11 +172,10 @@ export interface ImagesImages extends Schema.Component {
   collectionName: 'components_images_images';
   info: {
     displayName: 'images';
-    icon: 'envelop';
-    description: '';
+    icon: 'command';
   };
   attributes: {
-    images: Attribute.Media;
+    image: Attribute.Media;
     image_by: Attribute.String;
   };
 }
@@ -204,6 +214,17 @@ export interface MainBlogHeadingMainHeading extends Schema.Component {
   };
   attributes: {
     heading: Attribute.RichText;
+  };
+}
+
+export interface MultiImagesMultiImages extends Schema.Component {
+  collectionName: 'components_multi_images_multi_images';
+  info: {
+    displayName: 'multi-images';
+    icon: 'book';
+  };
+  attributes: {
+    images: Attribute.Component<'images.images', true>;
   };
 }
 
@@ -341,12 +362,14 @@ declare module '@strapi/types' {
       'description.description': DescriptionDescription;
       'description.information': DescriptionInformation;
       'divider.divider': DividerDivider;
+      'group-images.group-images': GroupImagesGroupImages;
       'heading.heading': HeadingHeading;
       'image.image': ImageImage;
       'images.images': ImagesImages;
       'information-box.information-box': InformationBoxInformationBox;
       'information.information': InformationInformation;
       'main-blog-heading.main-heading': MainBlogHeadingMainHeading;
+      'multi-images.multi-images': MultiImagesMultiImages;
       'post-description.post-description': PostDescriptionPostDescription;
       'post-header-image.post-header-image': PostHeaderImagePostHeaderImage;
       'post-heading.post-heading': PostHeadingPostHeading;
