@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "reviews_headings",
+  "info": {
+    "singularName": "reviews-heading",
+    "pluralName": "reviews-headings",
+    "displayName": "reviews_heading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    },
+    "sub_heading": {
+      "type": "richtext"
+    }
+  }
+}

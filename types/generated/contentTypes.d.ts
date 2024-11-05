@@ -1550,6 +1550,37 @@ export interface ApiPrintsHeadingPrintsHeading extends Schema.SingleType {
   };
 }
 
+export interface ApiReviewsHeadingReviewsHeading extends Schema.SingleType {
+  collectionName: 'reviews_headings';
+  info: {
+    singularName: 'reviews-heading';
+    pluralName: 'reviews-headings';
+    displayName: 'reviews_heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    sub_heading: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::reviews-heading.reviews-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::reviews-heading.reviews-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSocialMediaHeadingSocialMediaHeading
   extends Schema.SingleType {
   collectionName: 'social_media_headings';
@@ -1789,6 +1820,7 @@ declare module '@strapi/types' {
       'api::hot-picks-heading.hot-picks-heading': ApiHotPicksHeadingHotPicksHeading;
       'api::print.print': ApiPrintPrint;
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
+      'api::reviews-heading.reviews-heading': ApiReviewsHeadingReviewsHeading;
       'api::social-media-heading.social-media-heading': ApiSocialMediaHeadingSocialMediaHeading;
       'api::trending-destination-heading.trending-destination-heading': ApiTrendingDestinationHeadingTrendingDestinationHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
