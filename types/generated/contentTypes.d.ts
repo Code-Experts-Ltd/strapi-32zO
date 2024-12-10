@@ -1099,6 +1099,69 @@ export interface ApiCityGuidesHeadingCityGuidesHeading
   };
 }
 
+export interface ApiCommingSoonCommingSoon extends Schema.CollectionType {
+  collectionName: 'comming_soons';
+  info: {
+    singularName: 'comming-soon';
+    pluralName: 'comming-soons';
+    displayName: 'comming-soon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comming-soon.comming-soon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comming-soon.comming-soon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCommingSoonHeadingCommingSoonHeading
+  extends Schema.SingleType {
+  collectionName: 'comming_soon_headings';
+  info: {
+    singularName: 'comming-soon-heading';
+    pluralName: 'comming-soon-headings';
+    displayName: 'comming-soon-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    main_heading: Attribute.RichText;
+    sub_heading: Attribute.RichText;
+    description: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::comming-soon-heading.comming-soon-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::comming-soon-heading.comming-soon-heading',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCryptoCurrencyHeadingCryptoCurrencyHeading
   extends Schema.SingleType {
   collectionName: 'crypto_currency_headings';
@@ -1807,6 +1870,8 @@ declare module '@strapi/types' {
       'api::blogs-heading.blogs-heading': ApiBlogsHeadingBlogsHeading;
       'api::city-guide.city-guide': ApiCityGuideCityGuide;
       'api::city-guides-heading.city-guides-heading': ApiCityGuidesHeadingCityGuidesHeading;
+      'api::comming-soon.comming-soon': ApiCommingSoonCommingSoon;
+      'api::comming-soon-heading.comming-soon-heading': ApiCommingSoonHeadingCommingSoonHeading;
       'api::crypto-currency-heading.crypto-currency-heading': ApiCryptoCurrencyHeadingCryptoCurrencyHeading;
       'api::every-thing-you-need.every-thing-you-need': ApiEveryThingYouNeedEveryThingYouNeed;
       'api::every-thing-you-need-heading.every-thing-you-need-heading': ApiEveryThingYouNeedHeadingEveryThingYouNeedHeading;
