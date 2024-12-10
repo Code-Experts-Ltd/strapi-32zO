@@ -4,7 +4,8 @@
   "info": {
     "singularName": "comming-soon",
     "pluralName": "comming-soons",
-    "displayName": "comming-soon"
+    "displayName": "comming-soon",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +20,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
     }
   }
 }

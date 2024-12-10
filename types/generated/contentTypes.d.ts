@@ -1105,6 +1105,7 @@ export interface ApiCommingSoonCommingSoon extends Schema.CollectionType {
     singularName: 'comming-soon';
     pluralName: 'comming-soons';
     displayName: 'comming-soon';
+    description: '';
   };
   options: {
     draftAndPublish: true;
