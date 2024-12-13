@@ -1679,6 +1679,37 @@ export interface ApiSocialMediaHeadingSocialMediaHeading
   };
 }
 
+export interface ApiSubscribeCheckboxTextSubscribeCheckboxText
+  extends Schema.SingleType {
+  collectionName: 'subscribe_checkbox_texts';
+  info: {
+    singularName: 'subscribe-checkbox-text';
+    pluralName: 'subscribe-checkbox-texts';
+    displayName: 'subscribe-checkbox-text';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heading: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::subscribe-checkbox-text.subscribe-checkbox-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::subscribe-checkbox-text.subscribe-checkbox-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTrendingDestinationHeadingTrendingDestinationHeading
   extends Schema.SingleType {
   collectionName: 'trending_destination_headings';
@@ -1888,6 +1919,7 @@ declare module '@strapi/types' {
       'api::prints-heading.prints-heading': ApiPrintsHeadingPrintsHeading;
       'api::reviews-heading.reviews-heading': ApiReviewsHeadingReviewsHeading;
       'api::social-media-heading.social-media-heading': ApiSocialMediaHeadingSocialMediaHeading;
+      'api::subscribe-checkbox-text.subscribe-checkbox-text': ApiSubscribeCheckboxTextSubscribeCheckboxText;
       'api::trending-destination-heading.trending-destination-heading': ApiTrendingDestinationHeadingTrendingDestinationHeading;
       'api::what-you-will-get.what-you-will-get': ApiWhatYouWillGetWhatYouWillGet;
       'api::what-you-will-get-heading.what-you-will-get-heading': ApiWhatYouWillGetHeadingWhatYouWillGetHeading;

@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "subscribe_checkbox_texts",
+  "info": {
+    "singularName": "subscribe-checkbox-text",
+    "pluralName": "subscribe-checkbox-texts",
+    "displayName": "subscribe-checkbox-text"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "richtext"
+    }
+  }
+}
