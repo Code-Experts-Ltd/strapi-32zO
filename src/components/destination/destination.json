@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_destination_destinations",
+  "info": {
+    "displayName": "destination",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "destination": {
+      "type": "richtext"
+    }
+  }
+}

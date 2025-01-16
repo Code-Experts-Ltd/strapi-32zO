@@ -981,7 +981,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         'post-description.post-description',
         'post-heading.post-heading',
         'multi-images.multi-images',
-        'blog-header-image.blog-header-image'
+        'blog-header-image.blog-header-image',
+        'destination.destination'
       ]
     >;
     category: Attribute.Component<'category.category'>;

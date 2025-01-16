@@ -124,6 +124,17 @@ export interface DescriptionInformation extends Schema.Component {
   };
 }
 
+export interface DestinationDestination extends Schema.Component {
+  collectionName: 'components_destination_destinations';
+  info: {
+    displayName: 'destination';
+    icon: 'clock';
+  };
+  attributes: {
+    destination: Attribute.RichText;
+  };
+}
+
 export interface DividerDivider extends Schema.Component {
   collectionName: 'components_divider_dividers';
   info: {
@@ -361,6 +372,7 @@ declare module '@strapi/types' {
       'description.blog-description': DescriptionBlogDescription;
       'description.description': DescriptionDescription;
       'description.information': DescriptionInformation;
+      'destination.destination': DestinationDestination;
       'divider.divider': DividerDivider;
       'group-images.group-images': GroupImagesGroupImages;
       'heading.heading': HeadingHeading;
