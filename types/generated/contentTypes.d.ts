@@ -975,13 +975,13 @@ export interface ApiBlogBlog extends Schema.CollectionType {
         'published-date.published-date',
         'description.blog-description',
         'quick-overview.quick-overview',
-        'blog-header-image.blog-header-image',
         'post-header-image.post-header-image',
         'information-box.information-box',
         'divider.divider',
         'post-description.post-description',
         'post-heading.post-heading',
-        'multi-images.multi-images'
+        'multi-images.multi-images',
+        'blog-header-image.blog-header-image'
       ]
     >;
     category: Attribute.Component<'category.category'>;
